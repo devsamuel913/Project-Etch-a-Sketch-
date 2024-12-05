@@ -20,7 +20,7 @@
 
 }
 
-.item:hover {
+.colored {
     background-color: darkblue; /* Change background color when hovered */
     color: white; /* Change text color when hovered */
   }
