@@ -1,6 +1,10 @@
 .container-two{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
 }
 
 .cl-divs-container{
@@ -23,4 +27,15 @@
 .colored {
     background-color: darkblue; /* Change background color when hovered */
     color: white; /* Change text color when hovered */
+  }
+
+  .newGrid{
+    height: 100px;
+    width: 200px;
+    font-size: 40px;
+  }
+  .new-grid-container{
+    margin: 100px;
+    display: flex;
+    justify-content: center;
   }
