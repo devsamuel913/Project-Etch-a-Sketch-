@@ -1,0 +1,26 @@
+.container-two{
+    display: flex;
+    justify-content: center;
+}
+
+.cl-divs-container{
+    display: flex;
+    flex-wrap: wrap;  /* Allow items to wrap onto the next line */
+    max-height: 1600px;
+    max-width: 1600px;
+
+}
+
+.item {
+    width: 100px;  /* Adjust this to control how many items per row */
+    height: 100px;  /* Adjust height if necessary */
+    border: 1px solid black;
+    box-sizing: border-box;  /* Makes sure border is included in width calculation */
+    transition: background-color 0.07s ease; /* Smooth transition for background color */
+
+}
+
+.item:hover {
+    background-color: darkblue; /* Change background color when hovered */
+    color: white; /* Change text color when hovered */
+  }
