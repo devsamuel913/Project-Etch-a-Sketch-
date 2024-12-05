@@ -7,15 +7,29 @@ for(let i = 0; i < 256; i++){
     document.getElementById("divs-container").appendChild(newDiv);
 }
 
-// when you hover over a div it gets completely colored
+///*** */ when you hover over a div it gets completely colored
 const divs = document.querySelectorAll('.item');
 divs.forEach(div => {
     div.addEventListener('mouseenter',hoverDiv)
 });
 
+function getRandomColor() {
+    
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+
+    
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+
 function hoverDiv(event){
     if (!event.target.classList.contains("colored")) { // Check if the div doesn't have the 'colored' class
+        event.target.style.backgroundColor = getRandomColor();
         event.target.classList.add("colored"); // Add the 'colored' class if it doesn't have it
+    }else{
+        
     }
 }
 
@@ -39,7 +53,7 @@ function askForSize(){
             const classForGrids = document.querySelector(".cl-divs-container");
             classForGrids.style.maxHeight = `${parseInt(userInputHeight)*100}` + "px";
             classForGrids.style.maxWidth = `${parseInt(userInputWidth)*100}` + "px";
-
+            //*** */
             const divs = document.querySelectorAll('.item');
             divs.forEach(div => {
             div.addEventListener('mouseenter',hoverDiv)});
